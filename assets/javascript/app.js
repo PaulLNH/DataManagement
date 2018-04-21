@@ -1,17 +1,16 @@
-var now = Date(2018 - 01 - 01);
-
+var now = moment().format("YYYY/MM/DD");
+console.log(now);
 var employee = {
   name: "Paul",
   role: "Engineer",
   startDate: Date(2017 - 01 - 01),
-  monthsWorked: 6,
+  monthsWorked: 12,
   rate: 15000,
   totalBilled: 60000
 };
 
 $("#submitForm").on("click", function(event) {
   event.preventDefault();
-  console.log(employee.monthsWorked);
   var th = $('<th scope="row">');
   var tr = $("<tr>");
   var tdName = $("<td>" + employee.name + "</td>");
